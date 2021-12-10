@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cheapest Punks on Hive</title>
+    <link
+      rel="stylesheet"
+      href="https://punks.usehive.com/assets/index.a778a721.css"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/@hiveio/dhive@latest/dist/dhive.js"></script>
+  </head>
+  <body
+    class="bg-repeat"
+    style="
+      background-image: url('https://punks.usehive.com/img/what-the-hex-dark.png');
+    "
+    data-new-gr-c-s-check-loaded="14.1041.0"
+    data-gr-ext-installed=""
+  >
+    <div id="modal"></div>
+    <div id="app" data-v-app="">
+      <div class="flex flex-col min-h-screen">
+        <div class="">
+          <div class="grid grid-cols-1 md:grid-cols-3">
+            <div class="hidden md:block"></div>
+            <div class="justify-self-end text-center m-5 xl:mr-0"></div>
+          </div>
+        </div>
+        <div
+          id="nav"
+          class="
+            flex
+            justify-center
+            gap-16
+            font-bold font-serif
+            text-white text-lg
+            my-5
+            md:my-2
+            z-0
+          "
+          data-v-344236a7=""
+        >
+          <a
+            target="_blank"
+            href="https://vote.hive.uno/@igormuba"
+            class="
+              router-link-active router-link-exact-active
+              keychainify-checked
+            "
+            data-v-344236a7=""
+            aria-current="page"
+            >Click here to vote @igormuba for Hive Witness</a
+          >
+        </div>
+        <div>
+          <div
+            class="
+              grid grid-cols-1
+              md:grid-cols-2
+              lg:grid-cols-3
+              xl:grid-cols-4
+              2xl:grid-cols-5
+              3xl:grid-cols-6
+              4xl:grid-cols-8
+              justify-items-center
+              m-10
+              gap-16
+              md:gap-8
+            "
+            id="punkslist"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <script src="gamelogic.js"></script>
+  </body>
+</html>
