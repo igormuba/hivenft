@@ -627,7 +627,7 @@ function addModal(punk) {
   //   console.log(cheapestPunks);
   let punkslist = document.getElementById("punkslist");
   let modal = document.getElementById("modal");
-
+  let punkscount = document.getElementById("punkscount");
   for (let punk of cheapestPunks) {
     console.log(punk);
     punkslist.innerHTML += `<div class="col-span-1">
@@ -690,4 +690,11 @@ function addModal(punk) {
       </div>
     </div>`;
   }
+  punkscount.innerHTML = `There are only ${
+    cheapestPunks.length
+  } Punks priced from ${parseFloat(cheapestPunks[0].price).toFixed(
+    2
+  )} to ${parseFloat(cheapestPunks[cheapestPunks.length - 1].price).toFixed(
+    2
+  )}`;
 })();

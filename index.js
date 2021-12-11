@@ -178,7 +178,15 @@ app.get("/cheapestpunks", (req, res) => {
                   response.push({ ...i, ...punkdata[0] });
                 }
                 // console.log("response");
-                res.send(response);
+                res.send(
+                  response.sort(function (a, b) {
+                    if (parseFloat(a.rarity) == parseFloat(b.rarity)) {
+                      // rarity is only important when prices are the same
+                      return parseFloat(b.price) - parseFloat(a.price);
+                    }
+                    return parseFloat(a.price) > parseFloat(b.price) ? 1 : -1;
+                  })
+                );
                 // res.json({});
               }
             );
